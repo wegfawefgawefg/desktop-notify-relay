@@ -1,0 +1,23 @@
+{
+  "ntfy": {
+    "base_url": "https://ntfy.sh",
+    "topic": "replace_me",
+    "token_env": "NTFY_TOKEN",
+    "title_prefix": "wegbox"
+  },
+  "filters": {
+    "require_app_name_regex": [
+      "(?i)kitty"
+    ],
+    "include_any_regex": [],
+    "exclude_any_regex": [
+      "(?i)firefox",
+      "(?i)discord",
+      "(?i)signal",
+      "(?i)slack",
+      "(?i)thunderbird"
+    ],
+    "log_all_notifications": true,
+    "dedupe_seconds": 20
+  }
+}

@@ -1,0 +1,14 @@
+[Unit]
+Description=Forward selected desktop notifications to ntfy
+After=graphical-session.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Coding/Scratch/desktop-notify-relay
+EnvironmentFile=%h/.config/desktop-notify-relay/env
+ExecStart=/usr/bin/python3 %h/Coding/Scratch/desktop-notify-relay/relay.py --config %h/.config/desktop-notify-relay/config.json
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target
